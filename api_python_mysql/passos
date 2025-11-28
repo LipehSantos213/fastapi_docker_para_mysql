@@ -1,0 +1,44 @@
+#CRIAR AMBIENTE VIRTUAL (VENV)
+-> python -m venv venv
+-> EXECUTA DENTRO DA PASTA DO PROJETO
+
+#ATIVAR AMBIENTE VIRTUAL
+-> venv\Scripts\activate
+
+#INSTALAR DEPENDENCIAS PARA O SERVIDOR
+-> pip install fastapi uvicorn
+
+#DRIVERS E ORM
+-> pip install sqlmodel
+-> pip install pymysql
+->pip install sqlalchemy -------
+->pip install mysqlclient--------
+
+#TOKEN
+-> pip install python-jose passlib[bcrypt]
+
+
+#RODAR API
+-> uvicorn app.main:app --reload
+
+#Gerando o requirements.txt
+->pip freeze > requirements.txt
+
+# PARA OUTRO DESENVOLDEDORES INSTALAR
+-> pip install -r requirements.txt
+
+
+#Ver BD do docker no workbeach
+    No Workbench:
+
+    Database > Connect to Database
+
+    Hostname: localhost
+
+    Port: 3307 (a porta externa que você expôs)
+
+    Username: root
+
+    Password: root (ou a sua senha)
+
+    Test Connection → OK
